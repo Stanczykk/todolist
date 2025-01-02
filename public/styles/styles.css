@@ -1,0 +1,90 @@
+li {
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(45deg, #EFD0CA, #214E34);
+    height: 100vh;
+}
+
+.container {
+    /*    width: 50%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    border: 3px solid #214E34;
+    border-radius: 20px;
+    margin: 15vh 50vh;
+    font-family: "Raleway", serif;
+    background-color: #C6C6C6;
+}
+
+.actions {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.actions button {
+    width: 100px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-family: "Raleway", serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+}
+
+.tasks {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tasks li {
+    margin: 15px 0;
+}
+
+.completed {
+    text-decoration: line-through !important;
+}
+
+#add {
+    background-color: #2C73FF;
+    color: #fff;
+}
+
+#delete {
+    background-color: #FF4949;
+    color: #fff;
+}
+
+#edit {
+    background-color: #828282;
+    color: #fff;
+}
+
+.checkbox-round {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #214E34;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.checkbox-round:checked {
+    background-color: #5C7457;
+}
