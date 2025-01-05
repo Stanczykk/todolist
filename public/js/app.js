@@ -1,3 +1,3 @@
 $(".add").click(function() {
-    alert("hello");
+    $("#formadd").toggleClass("hidden");
 });
