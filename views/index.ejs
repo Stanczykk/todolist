@@ -1,36 +1,26 @@
 <%- include("partials/header.ejs") %>
 <div class="container">
     <h1>Things to do for today</h1>
-    <div class="actions">
-        <button class="add">Add</button>
-        <button class="delete">Delete</button>
-        <button class="edit">Edit</button>
-    </div>
-    <form action="/add" class="hidden" id="formadd" method="post">
+    <form action="/add" method="post" style="display: inline;">
         <input type="text" name="newTask" class="user-input">
+        <div class="actions">
+            <button type="submit" class="add">Add</button>
     </form>
-    <div class="tasks">
-        <ul>
-            <% for (var i=0; i < tasks.length; i++) { %>
-            <li>
-                <input type="checkbox" class="checkbox-round" id="task-<%= i %>">
-                <label for="task-<%= i %>">
-                    <%= tasks[i] %>
-                </label>
-            </li>
-            <% } %>
-        </ul>
-    </div>
-    <h2>Done</h2>
-    <div class="tasks">
-        <ul>
-            <!--  <li class="done">
-                    <input type="checkbox" class="checkbox-round" id="task-1" checked>
-                    <label for="task-1">
-
-                    </label>
-                </li> -->
-        </ul>
-    </div>
+    <form action="/delete" method="post" id="formdelete">
+        <button type="submit" class="done">Done</button>
+</div>
+<div class="tasks">
+    <ul>
+        <% for (var i=0; i < tasks.length; i++) { %>
+        <li class="taskList" id="taskList-<%= i %>">
+            <input type="checkbox" name="tasksToDelete" value="<%= tasks[i] %>" class="checkbox-round" id="task-<%= i %>">
+            <label for="task-<%= i %>">
+                <%= tasks[i] %>
+            </label>
+        </li>
+        <% } %>
+    </ul>
+</div>
+</form>
 </div>
 <%- include("partials/footer.ejs") %>
